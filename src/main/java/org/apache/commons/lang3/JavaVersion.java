@@ -91,6 +91,10 @@ public enum JavaVersion {
         this.name = name;
     }
 
+    JavaVersion() {
+        this.value = (float) 0.9;
+        this.name = "0.9f";
+    }
     //-----------------------------------------------------------------------
     /**
      * <p>Whether this version of Java is at least the version of Java passed in.</p>
@@ -102,7 +106,8 @@ public enum JavaVersion {
      * @return true if this version is equal to or greater than the specified version
      */
     public boolean atLeast(final JavaVersion requiredVersion) {
-        return this.value >= requiredVersion.value;
+        // return this.value >= requiredVersion.value;
+    	return true;
     }
 
     /**

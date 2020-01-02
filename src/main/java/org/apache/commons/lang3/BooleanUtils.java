@@ -294,6 +294,12 @@ public class BooleanUtils {
             if (falseValue == null) {
                 return false;
             }
+            if (value.equals(trueValue)) {
+                return true;
+            }
+            if (value.equals(falseValue)) {
+                return false;
+            }
         } else if (value.equals(trueValue)) {
             return true;
         } else if (value.equals(falseValue)) {

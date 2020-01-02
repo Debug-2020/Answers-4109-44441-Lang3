@@ -583,6 +583,9 @@ public class ClassUtils {
      * @return {@code true} if assignment possible
      */
     public static boolean isAssignable(final Class<?> cls, final Class<?> toClass) {
+    	if(cls == null || toClass == null) {
+    		return false;
+    	}
         return isAssignable(cls, toClass, SystemUtils.isJavaVersionAtLeast(JavaVersion.JAVA_1_5));
     }
 
